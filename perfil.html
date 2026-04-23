@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PERFIL</title>
+
+<!-- Coloqué las tipografías de esta forma para agilizarlo y poder utilizar el CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
+
+<style>
+
+/* Un reset */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+/* Aqui es para controlar la tipografía */
+body{ font-family: 'Jura', sans-serif; color:white; }
+
+/* Los titulos */
+h1, h2, h3{ font-family: 'Michroma', sans-serif; }
+
+/* Aqui el fondo */
+.fondo{ position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; }
+		
+footer{margin-top:auto;}
+
+/* Aqui el header */
+header{background: linear-gradient(#ff004c,#980002);text-align:center;padding:40px 20px;}
+
+header img{width:150px;}
+
+header h1{margin-top:10px;letter-spacing:5px;}
+
+/* Las secciones */
+section{padding:30px 20px;text-align:center;}
+
+	section p{max-width:900px;margin:auto;text-align:center;}
+	
+/* Los titulos */
+h2{margin:15px 0;}
+
+/* Texto */
+p{font-size:14px;line-height:1.5;}
+
+/* Aqui los BTS */
+.btn{display:inline-block;background:#ff0055;padding:10px 20px;border-radius:20px;margin:10px;text-decoration:none;color:white;}
+
+/* Aqui las tarjetas */
+.card{background: rgba(255,255,255,0.05);padding:20px;margin:20px 0;border-radius:10px;}
+
+/* Aqui las imagens */
+.card img{width:100%;margin-top:10px;border-radius:10px;}
+
+/* SECCIÓN ACCIONES */
+.acciones{padding:10px 20px;max-width:900px; margin:auto; }
+
+/* Estas son las filas */
+.fila{display:flex;justify-content:space-between;align-items:center;gap:80px;margin:10px 0;}
+	
+/* Textos */
+.texto p{font-family:'Michroma', sans-serif;font-size:22px;  letter-spacing:3px;text-align:left;}
+
+/* bts con imagen */
+.btn-img{width:350px;  }
+
+/* LÍNEA */
+.linea{height:2px; background:#ff0055; margin:30px 0;}
+	
+	/* Seccion de conocenos */
+.conocenos{padding:0px 20px; max-width:900px; margin:auto;}
+
+/* El titulo */
+.titulo-seccion{font-size:38px; text-align:center; margin-bottom:40px;}
+
+/* Los bloques de misión y visión */
+.bloque{display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:40px;}
+
+/* Aqui sirve para revertir las acciones de la sección de Mision */
+.reverse{flex-direction:row-reverse;}
+
+/* Aqui los textos */
+.texto{width:50%; text-align:left; padding-left:10px; }
+
+.texto h3{font-size:20px; margin-bottom:10px;}
+
+.conocenos .texto p{font-size:14px; line-height:1.5;}
+
+/* IMAGEN */
+.imagen{width:50%;}
+
+.imagen img{width:100%; border-radius:10px;}
+	
+	/* VALORES */
+.valores{padding:40px 20px; max-width:900px; margin:auto; text-align:center;}
+
+.contenedor-valores{display:flex; justify-content:space-between; gap:20px; margin-top:20px;}
+
+.valor{width:30%;}
+.valor h3{font-size:16px; margin-bottom:10px;}
+.valor p{font-size:13px;}
+
+/* Aqui esta mi banner */
+
+.banner{margin: var(--espacio-banner) 0;}
+.banner img{width:100%;}
+
+/* Esto es para los textos inferiores */
+
+.extra{padding: var(--espacio-secciones) 20px;max-width:900px; margin-left:auto; margin-right:auto; margin-bottom:80px;}
+
+.extra-contenido{display:flex;justify-content:space-between;gap:30px;}
+
+.extra-contenido div{
+    width:50%;
+}
+
+.extra h3{
+    font-size:18px;
+    margin-bottom: var(--espacio-textos);
+}
+
+.extra p{
+    font-size:14px;
+}
+
+/* Aqui control para mover elementos */
+
+:root{
+    --espacio-banner: 10px;
+    --espacio-secciones: 20px;
+    --espacio-textos: 10px;
+
+    --espacio-footer-arriba: 120px;
+    --icono-size: 100px;             
+    --espacio-iconos: 100px;         
+    --footer-texto: 22px;
+}
+
+/* CONTENEDOR GENERAL DE CONTENIDO */
+.contenido{max-width:900px; margin:auto; padding:40px 20px;}
+
+/* TITULOS GRANDES */
+.titulo-grande{ font-size:28px;letter-spacing:6px;margin:20px 0;}
+
+/* SUBTITULO */
+.subtitulo{font-size:14px;letter-spacing:6px;opacity:0.8;}
+
+/* PERFIL */
+.perfil{ display:flex; align-items:center; gap:30px; margin:40px 0;}
+
+.perfil img{width:180px;border-radius:10px;}
+
+.perfil-texto{text-align:left;}
+
+.perfil-texto h2{font-size:22px; letter-spacing:4px; margin-bottom:10px;}
+
+.perfil-texto p{ font-size:14px;}
+
+/* BOTONES ROSAS */
+.btn-rosa{ display:block; background:#ff0055; padding:12px; border-radius:25px; text-align:center; margin:15px auto; width:250px; text-decoration:none;color:white; letter-spacing:3px;}
+
+/* EXPERIENCIA */
+.experiencia{margin:40px 0;}
+
+.experiencia p{font-size:14px; margin-bottom:15px;}
+
+/* PROPUESTA */
+.propuesta{ display:flex; align-items:center; gap:30px; margin:40px 0;}
+
+.propuesta img{width:200px;}
+
+/* MÉRITOS */
+.meritos{ display:flex;justify-content:space-between;text-align:center;margin:40px 0;}
+
+.meritos div{ width:30%;}
+
+/* CONTACTO */ 
+.contacto{background: linear-gradient(#980002,#f0003c); padding:30px 20px; margin-top:40px;}
+
+.contacto h2{letter-spacing:6px; margin-bottom:20px;}		
+	
+/* Aqui va footer */
+
+footer{background: linear-gradient(#ff004c,#980002); text-align:center; padding:10px 0; margin-top:auto; width:100vw; margin-left:calc(-50vw + 50%);}
+
+/* TEXTO */
+footer p{ font-size: var(--footer-texto); margin-bottom:20px;}
+
+/* CONTENEDOR ICONOS */
+.redes{display:flex; justify-content:center; gap: var(--espacio-iconos);}
+
+/* ICONOS ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.redes img{
+    width: var(--icono-size);
+}		
+</style>
+	
+</head>
+
+<body>
+<!-- Aqui la imagen de fondo -->
+<img src="imagenes/FONDO.png" class="fondo">
+
+<div class="overlay">
+
+<header>
+    <p style= "font-size: 30px; letter-spacing: 10px" class="subtitulo">SOBRE EL</p>
+    <h1 style= "font-size: 50px; margin-top: 1px; letter-spacing: 10px" class="titulo-grande">DISEÑADOR</h1>
+</header>
+
+<div class="contenido">
+
+    <!-- PERFIL -->
+    <div style="margin-top: 2px" class="perfil">
+        <img style="width: 300px" src="imagenes/YO RECORTADO.png">
+
+        <div class="perfil-texto">
+            <h2 style= "letter-spacing: 10px">CHRISTIAN<br>BUGARIN</h2>
+            <p style="margin-top: 30px; font-size: 18px">
+                Soy un artista digital enfocado en la creación de contenido visual mediante modelado 3D, ilustración y edición audiovisual. Mi trabajo se basa en la combinación de creatividad, técnica y atención al detalle, buscando siempre transformar ideas en piezas visuales atractivas y funcionales. Mi meta es dedicarme a la edición audiovisual, modelado 3D y efectos visuales para crear experiencias permanentes en las personas. He trabajado eficazmente en equipo e individual en Stands para cine, cortometrajes y animaciones, resaltando siempre la calidad profesional.
+            </p>
+        </div>
+    </div>
+
+    <div class="linea"></div>
+
+    <!-- BOTONES -->
+    <a href="portafolio.html"> <img style="width: 400px; display:block; margin:auto;" src="imagenes/BT_PORTAFOLIO.png"> </a>
+    <a href="index.html"> <img style="width: 400px; display:block; margin:auto; margin-top: 30px" src="imagenes/BT_INICIO.png"> </a>
+
+    <div class="linea"></div>
+
+    <!-- EXPERIENCIA -->
+    <div class="experiencia">
+        <h2 style="font-size: 30px" class="titulo-grande">EXPERIENCIA</h2>
+        <p style="font-size: 18px">Desarrollo en la creación de contenido visual mediante modelado 3D, ilustración y edición audiovisual. Ha desarrollado proyectos enfocados en la calidad estética, la innovación y la atención al detalle, aplicando herramientas digitales para transformar ideas en piezas visuales funcionales y atractivas.
+		El trabajo abarca la creación de modelos 3D optimizados, contenido visual para distintos formatos y la producción de material audiovisual, cada uno adaptándose a las necesidades de cada proyecto. Cada proyecto se caracteriza por su enfoque creativo, capacidad de aprendizaje constante y compromiso con la mejora continua.</p>
+    </div>
+
+    <img src="imagenes/CAVA4.png" style="width:100%; border-radius:10px;">
+
+    <!-- PROPUESTA -->
+    <div class="propuesta">
+        <div>
+            <h2 style="font-size: 30px;" class="titulo-grande">PROPUESTA DE VALOR</h2>
+            <p style="margin-top: 15px; font-size: 18px">En Daryn Art, cada proyecto se desarrolla con un enfoque personalizado, priorizando la calidad, la innovación y la comunicación constante con el cliente. La propuesta se centra en ofrecer soluciones visuales integrales que combinan arte y tecnología, asegurando resultados profesionales adaptados a las necesidades específicas de cada proyecto. Más que solo diseño, se busca crear experiencias visuales que destaquen y generen impacto.</p>
+        </div>
+
+        <img style="width: 300px" src="imagenes/Perfil_1.png">
+    </div>
+	
+	    <div class="linea"></div>
+
+ <h2 style="font-size: 30px; text-align: center; margin-top: 50PX" class="titulo-grande">MÉRITOS</h2>
+    <!-- MÉRITOS -->
+    <div style="margin-top: 50px" class="meritos">
+		
+        <div>
+            <h3>CORTOMETRAJE</h3>
+            <p style="margin-top: 18px; font-size: 18px">“En la oscuridad” seleccionado entre 30 para exposición de diseño en campus.</p>
+        </div>
+
+        <div>
+            <h3>CAJAS ESCENOGRÁFICAS</h3>
+            <p style="margin-top: 18px; font-size: 18px">Cajas  de 60cm x 90cm con animación proyectada seleccionadas para exhibición escolar.</p>
+        </div>
+
+        <div>
+            <h3>EXPOSICIONES</h3>
+            <p style="margin-top: 18px; font-size: 18px">Propuesta de exposición para un proyecto: Stand de 1.80m x 2m) ante la SEP</p>
+        </div>
+    </div>
+
+    <img src="imagenes/Perfil_2.png" style="width:100%; border-radius:10px;">
+
+    <!-- CONTACTO -->
+    <div class="contacto">
+        <h2>CONTÁCTAME:</h2>
+
+        <a href="mailto:christian.daniel.1500@gmail.com"> <img style="width: 400px; display:block; margin-left: 1px;" src="imagenes/BT_CORREO.png"> </a>
+       <a href="https://wa.me/525573319804" target="_blank"> <img style="width: 400px; display:block; margin:auto;" src="imagenes/BT_WASA.png"> </a>
+        <a href="tel:5573319804">  <img style="width: 400px; display:block; margin-left:auto;" src="imagenes/BT_NO TELEFONOO.png">  </a>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+
+    <p style= "font-size: 50px; letter-spacing: 8px">PORTAFOLIO EN LÍNEA</p>
+
+    <div class="redes">
+        <a href="https://www.linkedin.com/in/christian-daniel-martinez-bugarin-a388b5383/" target="_blank">
+            <img src="imagenes/LOGO_LINKEDIN BLANCO.png">
+        </a>
+
+        <a href="https://www.artstation.com/darynart3design" target="_blank">
+            <img src="imagenes/LOGO_ART BLANCO.png">
+        </a>
+
+        <a href="https://www.behance.net/chrisbugarn" target="_blank">
+            <img src="imagenes/LOGO_BEHANCE BLANCO.png">
+        </a>
+    </div>
+
+</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ANIMACION</title>
+
+<!-- Coloqué las tipografías de esta forma para agilizarlo y poder utilizar el CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
+
+<style>
+
+/* Un reset */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+/* Aqui es para controlar la tipografía */
+body{ font-family: 'Jura', sans-serif; color:white; }
+
+/* Los titulos */
+h1, h2, h3{ font-family: 'Michroma', sans-serif; }
+
+/* Aqui el fondo */
+.fondo{ position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; }
+		
+footer{margin-top:auto;}
+
+/* Aqui el header */
+header{background: linear-gradient(#ff004c,#980002);text-align:center;padding:40px 20px;}
+
+header img{width:150px;}
+
+header h1{margin-top:10px;letter-spacing:5px;}
+
+/* Las secciones */
+section{padding:30px 20px;text-align:center;}
+
+	section p{max-width:900px;margin:auto;text-align:center;}
+	
+/* Los titulos */
+h2{margin:15px 0;}
+
+/* Texto */
+p{font-size:14px;line-height:1.5;}
+
+/* Aqui los BTS */
+.btn{display:inline-block;background:#ff0055;padding:10px 20px;border-radius:20px;margin:10px;text-decoration:none;color:white;}
+
+/* Aqui las tarjetas */
+.card{background: rgba(255,255,255,0.05);padding:20px;margin:20px 0;border-radius:10px;}
+
+/* Aqui las imagens */
+.card img{width:100%;margin-top:10px;border-radius:10px;}
+
+/* SECCIÓN ACCIONES */
+.acciones{padding:10px 20px;max-width:900px; margin:auto; }
+
+/* Estas son las filas */
+.fila{display:flex;justify-content:space-between;align-items:center;gap:80px;margin:10px 0;}
+	
+/* Textos */
+.texto p{font-family:'Michroma', sans-serif;font-size:22px;  letter-spacing:3px;text-align:left;}
+
+/* bts con imagen */
+.btn-img{width:350px;  }
+
+/* LÍNEA */
+.linea{
+    height:2px;
+    background:#ff0055;
+    width:100%;          
+    max-width:900px;    
+    margin:30px auto;   
+}
+	
+	/* Seccion de conocenos */
+.conocenos{padding:0px 20px; max-width:900px; margin:auto;}
+
+/* El titulo */
+.titulo-seccion{font-size:38px; text-align:center; margin-bottom:40px;}
+
+/* Los bloques de misión y visión */
+.bloque{display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:40px;}
+
+/* Aqui sirve para revertir las acciones de la sección de Mision */
+.reverse{flex-direction:row-reverse;}
+
+/* Aqui los textos */
+.texto{width:50%; text-align:left; padding-left:10px; }
+
+.texto h3{font-size:20px; margin-bottom:10px;}
+
+.conocenos .texto p{font-size:14px; line-height:1.5;}
+
+/* IMAGEN */
+.imagen{width:50%;}
+
+.imagen img{width:100%; border-radius:10px;}
+	
+	/* VALORES */
+.valores{padding:40px 20px; max-width:900px; margin:auto; text-align:center;}
+
+.contenedor-valores{display:flex; justify-content:space-between; gap:20px; margin-top:20px;}
+
+.valor{width:30%;}
+.valor h3{font-size:16px; margin-bottom:10px;}
+.valor p{font-size:13px;}
+
+/* Aqui esta mi banner */
+
+.banner{margin: var(--espacio-banner) 0;}
+.banner img{width:100%;}
+
+/* Esto es para los textos inferiores */
+
+.extra{padding: var(--espacio-secciones) 20px;max-width:900px; margin-left:auto; margin-right:auto; margin-bottom:80px;}
+
+.extra-contenido{display:flex;justify-content:space-between;gap:30px;}
+
+.extra-contenido div{
+    width:50%;
+}
+
+.extra h3{
+    font-size:18px;
+    margin-bottom: var(--espacio-textos);
+}
+
+.extra p{
+    font-size:14px;
+}
+
+/* Aqui control para mover elementos */
+
+:root{
+    --espacio-banner: 10px;
+    --espacio-secciones: 20px;
+    --espacio-textos: 10px;
+
+    --espacio-footer-arriba: 120px;
+    --icono-size: 100px;             
+    --espacio-iconos: 100px;         
+    --footer-texto: 22px;
+}
+
+/* Aqui va footer */
+
+footer{
+    background: linear-gradient(#ff004c,#980002);
+    text-align:center;
+
+    padding:10px 0;
+    margin-top:auto;
+
+    width:100vw;
+    margin-left:calc(-50vw + 50%);
+}
+
+/* TEXTO */
+footer p{
+    font-size: var(--footer-texto);
+    margin-bottom:20px;
+}
+
+/* CONTENEDOR ICONOS */
+.redes{
+    display:flex;
+    justify-content:center;
+    gap: var(--espacio-iconos);
+}
+
+/* ICONOS */
+.redes img{
+    width: var(--icono-size);
+}	
+	
+.contenido{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+	
+</style>
+	
+</head>
+
+<body>
+<!-- Aqui la imagen de fondo ----------------------------------------------------------------------------------------------------------------------------------------->
+<img src="imagenes/ZA.jpg" class="fondo">
+
+<div class="overlay">
+
+<header>
+    <h1 style="font-size: 50px; letter-spacing: 10px">ANIMACIÓN 3D</h1>
+</header>
+	
+<div class="contenido">
+
+<section>
+    <h2 style="letter-spacing: 8px; font-size: 40px;">INTRODUCCIÓN</h2>
+
+    <p style="font-size: 18px; margin-top: 20px;">
+        La animación 3D da vida a los modelos mediante movimiento, expresión y narrativa visual.
+Este proceso permite comunicar ideas de forma dinámica, ya sea a través de secuencias cortas, presentaciones o contenido creativo.
+    </p>
+
+    <p style="font-size: 18px; margin-top: 20px;">
+       Cada animación se trabaja cuidando el ritmo, la fluidez y el impacto visual para generar una experiencia atractiva.
+    </p>
+</section>
+	
+<div class="linea"></div>
+
+<a href="portafolio.html">
+    <img src="imagenes/BT_PORTAFOLIO.png" style="width:350px; display:block; margin:auto;">
+</a>
+
+<a href="index.html">
+    <img src="imagenes/BT_INICIO.png" style="width:350px; display:block; margin:auto; margin-top:20px;">
+</a>
+
+
+<!-- POLAROID -->
+<div class="linea"></div>
+
+<h2 style="letter-spacing:6px; margin-top:20px; text-align: center; font-size: 45px">LOGOS 3D</h2>
+
+<section>
+    <img src="imagenes/ANIM PORTADA.png" style="width:100%; border-radius:10px;">
+</section>
+
+<section class="bloque">
+    <div class="texto">
+        <h3 style="letter-spacing: 9px">PRESENTACIÓN</h3>
+        <p style="margin-top:10px; font-size:18px;">
+            Colección de logos 3D animados para las diferentes marcas de Miss México, donde se modeló, texturizó, y renderizó cada elemento.
+        </p>
+    </div>
+
+     <div>
+       <a href="logos3d.html">
+    <img src="imagenes/BT_INSPECCIONAR.png" style="width:400px; display:block; margin:auto; margin-top:20px;">
+</a>
+    </div>
+</section>
+
+
+<!-- CASA DE BAÑOS -->
+<div class="linea"></div>
+
+<h2 style="letter-spacing:6px; margin-top:20px; text-align: center; font-size: 45px">CORTOMETRAJE</h2>
+
+<section>
+    <img src="imagenes/CORTO_PORTADA.png" style="width:100%; border-radius:10px;">
+</section>
+
+<section class="bloque">
+    <div class="texto">
+        <h3 style="letter-spacing: 9px">PRESENTACIÓN</h3>
+        <p style="margin-top:10px; font-size:18px;">
+           Animación personal de 3 minutos donde se aplicó pantalla verde, animación de entorno y personaje, texturizado y modelado, así como edición de vóz, audio y música.
+        </p>
+    </div>
+
+     <div>
+       <a href="cortometraje.html">
+    <img src="imagenes/BT_INSPECCIONAR.png" style="width:400px; display:block; margin:auto; margin-top:20px;">
+</a>
+    </div>
+</section>
+
+
+<!-- VIDEOJUEGO -->
+<div class="linea"></div>
+
+<h2 style="letter-spacing:6px; margin-top:20px; text-align: center; font-size: 45px">LOOP DE ESCENARIOS</h2>
+
+<section>
+    <img src="imagenes/LOOP.png" style="width:100%; border-radius:10px;">
+</section>
+
+<section class="bloque">
+    <div class="texto">
+        <h3 style="letter-spacing: 9px">PRESENTACIÓN</h3>
+        <p style="margin-top:10px; font-size:18px;">
+         La cámara hace un "Zoom in" pasando por objetos 3D hasta cubrir la vista con la siguiente TV, transicionando de escenario con pantalla verde.        </p>
+    </div>
+
+     <div>
+       <a href="loop.html">
+    <img src="imagenes/BT_INSPECCIONAR.png" style="width:400px; display:block; margin:auto; margin-top:20px;">
+</a>
+    </div>
+</section>
+	
+<!-- Aqui la linea roja de separación -->
+<div class="linea"></div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+
+    <p style= "font-size: 50px; letter-spacing: 8px">PORTAFOLIO EN LÍNEA</p>
+
+    <div class="redes">
+        <a href="https://www.linkedin.com/in/christian-daniel-martinez-bugarin-a388b5383/" target="_blank">
+            <img src="imagenes/LOGO_LINKEDIN BLANCO.png">
+        </a>
+
+        <a href="https://www.artstation.com/darynart3design" target="_blank">
+            <img src="imagenes/LOGO_ART BLANCO.png">
+        </a>
+
+        <a href="https://www.behance.net/chrisbugarn" target="_blank">
+            <img src="imagenes/LOGO_BEHANCE BLANCO.png">
+        </a>
+    </div>
+
+</footer>
+</div>
+
+</body>
+</html>
